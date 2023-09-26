@@ -15,4 +15,9 @@ class Index extends BaseController
     {
         return 'hello,' . $name;
     }
+
+    public function test()
+    {
+        return 'this is a test';
+    }
 }
