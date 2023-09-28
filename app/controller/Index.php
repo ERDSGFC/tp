@@ -8,7 +8,9 @@ class Index extends BaseController
 {
     public function index()
     {
-        return 'hello word';
+        dump(opcache_reset());
+        dump(opcache_get_configuration());
+        dump(opcache_get_status());
     }
 
     public function hello($name = 'ThinkPHP8')
@@ -16,8 +18,8 @@ class Index extends BaseController
         return 'hello,' . $name;
     }
 
-    public function test()
+    public function phpInfo()
     {
-        return 'this is a test';
+        echo phpinfo();
     }
 }
